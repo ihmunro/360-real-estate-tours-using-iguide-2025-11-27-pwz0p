@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium iGuide 360 Tours for Real Estate. Increase buyer engagement and sell properties faster with immersive virtual experiences.">
+    <title>360 Real Estate Tours using iGuide | Premium Virtual Tours</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (for some UI elements) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF5A5F', // Coral Red
+                        secondary: '#1A1A1A', // Dark Gray
+                        accent: '#FFD166', // Warm Yellow
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'bold': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                        'glow': '0 0 20px rgba(255, 90, 95, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for Specific Design Requirements */
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #FF5A5F, #FFD166);
+        }
+        
+        .btn-gradient {
+            background-image: linear-gradient(to right, #FF5A5F, #FFD166);
+            transition: all 0.3s ease-out;
+        }
+        
+        .btn-gradient:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+            box-shadow: 0 10px 15px -3px rgba(255, 90, 95, 0.3);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="font-sans text-secondary antialiased bg-gray-50">
+
+    <!-- Header Section -->
+    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
+                <div class="bg-primary p-2 rounded-lg group-hover:bg-secondary transition-colors duration-300">
+                    <i data-lucide="box" class="text-white w-6 h-6"></i>
+                </div>
+                <span class="font-bold text-2xl tracking-tight text-secondary group-hover:text-primary transition-colors duration-300">iGuide<span class="text-primary group-hover:text-secondary">360</span></span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="font-medium text-secondary hover:text-primary transition-colors duration-300">Features</a>
+                <a href="#benefits" class="font-medium text-secondary hover:text-primary transition-colors duration-300">Benefits</a>
+                <a href="#testimonials" class="font-medium text-secondary hover:text-primary transition-colors duration-300">Reviews</a>
+                <a href="#faq" class="font-medium text-secondary hover:text-primary transition-colors duration-300">FAQ</a>
+                <a href="#contact" class="btn-gradient text-white px-6 py-2.5 rounded-lg font-bold shadow-md">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button class="mobile-menu-button p-2 rounded-md text-secondary hover:text-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-secondary hover:text-primary hover:bg-gray-50">Features</a>
+                <a href="#benefits" class="block px-3 py-2 rounded-md text-base font-medium text-secondary hover:text-primary hover:bg-gray-50">Benefits</a>
+                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-secondary hover:text-primary hover:bg-gray-50">Reviews</a>
+                <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-secondary hover:text-primary hover:bg-gray-50">FAQ</a>
+                <div class="mt-4 px-3">
+                    <a href="#contact" class="block w-full text-center btn-gradient text-white px-6 py-3 rounded-lg font-bold shadow-md">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-secondary">
+        <!-- Abstract Background Elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary/10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-accent/10 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <div class="text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-accent font-medium mb-6">
+                        <i data-lucide="sparkles" class="w-4 h-4"></i>
+                        <span>The Gold Standard in Property Visualization</span>
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+                        Experience <br>
+                        <span class="gradient-text">iGuide 360 Tours</span> <br>
+                        for Real Estate
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Transform how you sell properties with immersive, laser-accurate 3D virtual tours. Captivate buyers, reduce unnecessary showings, and close deals faster with our premium iGuide technology.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="btn-gradient text-white px-8 py-4 rounded-lg font-bold text-lg shadow-glow text-center">
+                            Book a Scan
+                        </a>
+                        <a href="#features" class="px-8 py-4 rounded-lg font-bold text-lg border-2 border-white/20 text-white hover:bg-white/10 transition-all duration-300 text-center flex items-center justify-center gap-2">
+                            <span>Explore Features</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 flex items-center justify-center lg:justify-start gap-6 text-gray-400 text-sm font-medium">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="text-primary w-5 h-5"></i>
+                            <span>Lidar Accuracy</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="text-primary w-5 h-5"></i>
+                            <span>Floor Plans Included</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="text-primary w-5 h-5"></i>
+                            <span>MLS Ready</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative lg:h-[600px] w-full hidden lg:block">
+                    <!-- Stylized Graphic Representation -->
+                    <div class="relative z-10 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl border border-gray-700 p-4 transform rotate-3 hover:rotate-0 transition-all duration-500 h-full overflow-hidden group">
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center opacity-60 group-hover:scale-105 transition-transform duration-700"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent"></div>
+                        
+                        <!-- Floating UI Elements -->
+                        <div class="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                </div>
+                                <span class="text-white/80 text-xs font-mono">iguide-viewer.exe</span>
+                            </div>
+                            <div class="h-2 w-full bg-white/20 rounded-full overflow-hidden">
+                                <div class="h-full bg-primary w-2/3"></div>
+                            </div>
+                            <div class="flex justify-between mt-2 text-white/90 text-sm font-bold">
+                                <span>Generating 3D Mesh...</span>
+                                <span>67%</span>
+                            </div>
+                        </div>
+
+                        <div class="absolute top-8 right-8 bg-white p-4 rounded-lg shadow-lg animate-pulse">
+                            <i data-lucide="scan" class="text-secondary w-8 h-8"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-bold tracking-wider uppercase text-sm">Advanced Technology</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-secondary mt-3 mb-6">Why Choose iGuide?</h2>
+                <p class="text-lg text-gray-600">Our iGuide 360 tours offer more than just pictures. We provide a comprehensive property marketing suite that empowers agents and captivates buyers.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="card-hover bg-white p-8 rounded-xl border border-gray-100 shadow-xl group">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+                        <i data-lucide="eye" class="w-7 h-7 text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Immersive Virtual Tours</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Create a 24/7 open house experience. Allow potential buyers to navigate through properties room-by-room with high-definition clarity from anywhere in the world.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card-hover bg-white p-8 rounded-xl border border-gray-100 shadow-xl group">
+                    <div class="w-14 h-14 bg-accent/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-300">
+                        <i data-lucide="ruler" class="w-7 h-7 text-yellow-600 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Laser-Accurate Measurements</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Powered by Lidar technology, iGuide delivers room dimensions and total square footage with 99.6% reliability, protecting you from liability and building trust.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card-hover bg-white p-8 rounded-xl border border-gray-100 shadow-xl group">
+                    <div class="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300">
+                        <i data-lucide="map" class="w-7 h-7 text-secondary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Interactive Floor Plans</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Every iGuide comes with professional, drafting-grade floor plans that are fully interactive, allowing users to see exactly where they are in the home during the tour.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="card-hover bg-white p-8 rounded-xl border border-gray-100 shadow-xl group">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+                        <i data-lucide="bar-chart-3" class="w-7 h-7 text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Weekly Analytics</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Track your marketing success. Receive detailed reports on visitor counts, duration of visits, and referring sites to understand buyer behavior and interest levels.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="card-hover bg-white p-8 rounded-xl border border-gray-100 shadow-xl group">
+                    <div class="w-14 h-14 bg-accent/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-300">
+                        <i data-lucide="zap" class="w-7 h-7 text-yellow-600 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Fast Turnaround</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Time is money in real estate. We deliver your complete iGuide package, including 3D tour, floor plans, and images, typically within 24 hours of the scan.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="card-hover bg-white p-8 rounded-xl border border-gray-100 shadow-xl group">
+                    <div class="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300">
+                        <i data-lucide="share-2" class="w-7 h-7 text-secondary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Seamless Sharing</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Easily share your tour on MLS, social media, and real estate portals. iGuide links work flawlessly on desktop, mobile, and tablet devices without any app downloads.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+                <div class="order-2 lg:order-1 relative">
+                    <div class="absolute -top-4 -left-4 w-full h-full border-4 border-primary rounded-xl z-0"></div>
+                    <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Real Estate Interior" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-4xl font-bold text-secondary mb-6">Sell Faster & For More</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        In a competitive market, listings with 3D tours get 87% more views. iGuide helps you stand out, qualify buyers before they visit, and spend less time on showings that don't convert.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <div class="bg-accent/20 p-1 rounded-full mt-1">
+                                <i data-lucide="check" class="w-5 h-5 text-yellow-700 font-bold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary text-lg">Qualify Leads Instantly</h4>
+                                <p class="text-gray-600">Serious buyers use virtual tours to vet properties, meaning in-person visits are more likely to result in an offer.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="bg-accent/20 p-1 rounded-full mt-1">
+                                <i data-lucide="check" class="w-5 h-5 text-yellow-700 font-bold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary text-lg">Minimize Disruptions</h4>
+                                <p class="text-gray-600">Reduce the inconvenience for sellers by replacing casual lookie-loos with a high-fidelity digital open house.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-secondary mb-6">Engage Buyers Emotionally</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Still photos can be deceiving. iGuide provides spatial context that helps buyers connect emotionally with the home layout, flow, and potential before they ever step inside.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-primary">
+                            <span class="block text-4xl font-bold text-primary mb-2">4x</span>
+                            <span class="text-gray-600 font-medium">Higher Engagement on Listings</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-accent">
+                            <span class="block text-4xl font-bold text-yellow-500 mb-2">95%</span>
+                            <span class="text-gray-600 font-medium">Of Buyers are More Likely to Call</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                     <div class="absolute -bottom-4 -right-4 w-full h-full border-4 border-secondary rounded-xl z-0"></div>
+                    <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Family in living room" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Required: Exactly 4) -->
+    <section id="testimonials" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-accent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-secondary mb-4">Trusted by Top Agents</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">See why real estate professionals consider iGuide an essential tool for their luxury listings.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+                    <div class="flex text-accent mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"The accuracy of iGuide measurements is a game changer. I've stopped using manual measurements entirely. My clients love the floor plans!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">JD</div>
+                        <div>
+                            <h4 class="font-bold text-secondary text-sm">James Davidson</h4>
+                            <p class="text-xs text-gray-500">Senior Broker, LuxEstates</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+                    <div class="flex text-accent mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"iGuide 360 tours helped me sell a property sight-unseen to an international buyer. The level of detail gave them the confidence to make an offer."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center font-bold text-yellow-700">SL</div>
+                        <div>
+                            <h4 class="font-bold text-secondary text-sm">Sarah Lewis</h4>
+                            <p class="text-xs text-gray-500">Realtor, City Connect</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+                    <div class="flex text-accent mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"The weekly analytics report is my favorite feature. Showing sellers exactly how many people are virtually touring their home keeps them happy."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center font-bold text-secondary">MR</div>
+                        <div>
+                            <h4 class="font-bold text-secondary text-sm">Michael Ross</h4>
+                            <p class="text-xs text-gray-500">Agent, Prime Realty</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+                    <div class="flex text-accent mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Fast, efficient, and stunning quality. The integration with our MLS listing was seamless. It definitely makes my listing presentations stronger."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">EW</div>
+                        <div>
+                            <h4 class="font-bold text-secondary text-sm">Elena Wong</h4>
+                            <p class="text-xs text-gray-500">Associate, Urban Living</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section (Required: Exactly 2 paragraphs) -->
+    <section class="py-24 bg-secondary text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-8">About iGuide 360 Tours</h2>
+                    <div class="space-y-6 text-lg text-gray-300 leading-relaxed">
+                        <p>
+                            Founded in 2018 by a team of real estate veterans and technology enthusiasts, iGuide 360 Tours emerged from a simple observation: the traditional home buying process was inefficient and lacked transparency. We recognized that static photography, while beautiful, failed to convey the true flow and scale of a property. By leveraging cutting-edge Lidar technology and panoramic imaging, we set out to bridge the gap between physical and digital viewing, starting with a small team in the Pacific Northwest and growing into a premier provider of virtual real estate solutions.
+                        </p>
+                        <p>
+                            Our mission is to revolutionize the property market by empowering agents with tools that create genuine emotional connections and provide undeniable data accuracy. We believe that every listing deserves to be showcased in its best light, and that buyers deserve the confidence that comes with accurate measurements and comprehensive floor plans. At iGuide 360 Tours, our core values of integrity, innovation, and user-centric design drive every scan we perform, ensuring that we not only meet the evolving needs of the real estate industry but define its future standards.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-primary rounded-2xl transform rotate-6 opacity-20"></div>
+                    <div class="relative bg-gray-800 p-8 rounded-2xl border border-gray-700 shadow-2xl">
+                        <i data-lucide="camera" class="w-16 h-16 text-primary mb-6"></i>
+                        <h3 class="text-2xl font-bold mb-2">Our Promise</h3>
+                        <p class="text-gray-400">To deliver the highest fidelity virtual experience with the fastest turnaround time in the industry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (Required: Exactly 5 questions) -->
+    <section id="faq" class="py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-secondary mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600">Common questions about our iGuide services and process.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <button class="faq-question w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none hover:bg-gray-50 transition-colors duration-300">
+                        <span class="text-lg font-bold text-secondary">How long does an iGuide scan take on-site?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-8 pt-2 border-t border-gray-100">
+                        <p class="text-gray-600 leading-relaxed">
+                            Scanning time depends on the size of the property. Typically, an iGuide operator can scan about 1,000 square feet roughly every 20 minutes. An average 2,500 sq ft home usually takes about an hour to scan completely.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <button class="faq-question w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none hover:bg-gray-50 transition-colors duration-300">
+                        <span class="text-lg font-bold text-secondary">What is the turnaround time for the final tour?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-8 pt-2 border-t border-gray-100">
+                        <p class="text-gray-600 leading-relaxed">
+                            We pride ourselves on speed. The iGuide report, which includes the 3D tour, floor plans, room measurements, and photo gallery, is typically delivered by the next business day following the scan appointment.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <button class="faq-question w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none hover:bg-gray-50 transition-colors duration-300">
+                        <span class="text-lg font-bold text-secondary">Are iGuide tours compatible with MLS?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-8 pt-2 border-t border-gray-100">
+                        <p class="text-gray-600 leading-relaxed">
+                            Yes, absolutely. iGuide tours are fully compliant with MLS standards. We provide both branded and unbranded links to ensure you can post to your local MLS without violating any regulations regarding agent branding.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <button class="faq-question w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none hover:bg-gray-50 transition-colors duration-300">
+                        <span class="text-lg font-bold text-secondary">How accurate are the measurements?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-8 pt-2 border-t border-gray-100">
+                        <p class="text-gray-600 leading-relaxed">
+                            iGuide uses advanced Lidar laser technology to measure space. The measurements are accurate to within 0.5% or better. This is significantly more accurate than standard photo-based measuring tools and is considered reliable for real estate listings.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <button class="faq-question w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none hover:bg-gray-50 transition-colors duration-300">
+                        <span class="text-lg font-bold text-secondary">Do I need special software to view the tour?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-8 pt-2 border-t border-gray-100">
+                        <p class="text-gray-600 leading-relaxed">
+                            No special software or app is required. iGuide tours are web-based and work seamlessly on all modern browsers across desktops, tablets, and smartphones. Just click the link and start exploring.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-32 relative bg-secondary">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-secondary/95 to-secondary/80 z-10"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center">
+            <h2 class="text-5xl md:text-6xl font-bold text-white mb-8 tracking-tight">Ready to Transform Your Listings?</h2>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Join the top producing agents who use iGuide to win more listings and sell homes faster. Book your first scan today.
+            </p>
+            <a href="mailto:iainhmunro@gmail.com" class="inline-block btn-gradient text-white px-10 py-5 rounded-lg font-bold text-xl shadow-2xl hover:shadow-glow transform transition hover:-translate-y-1">
+                Contact Us Now
+            </a>
+            <p class="mt-6 text-gray-400 text-sm">Direct Email: iainhmunro@gmail.com</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Column -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-primary p-1.5 rounded-lg">
+                            <i data-lucide="box" class="text-white w-5 h-5"></i>
+                        </div>
+                        <span class="font-bold text-xl text-white">iGuide<span class="text-primary">360</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        Premium virtual tour solutions for modern real estate professionals. Bringing clarity, accuracy, and engagement to every listing.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Product</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="text-gray-400 hover:text-primary transition-colors text-sm">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-primary transition-colors text-sm">Benefits</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-primary transition-colors text-sm">Reviews</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-primary transition-colors text-sm">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links (Specific Requirement) -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="blog.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Blog</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-400 text-sm">
+                            <i data-lucide="mail" class="w-4 h-4 text-primary"></i>
+                            <a href="mailto:iainhmunro@gmail.com" class="hover:text-white">iainhmunro@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400 text-sm">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primary"></i>
+                            <span>123 Virtual Way, Tech City</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    &copy; 2025 iGuide 360 Tours. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Required JavaScript Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
