@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read the latest insights on iGuide 360 Tours, real estate marketing trends, and property visualization technology.">
+    <title>Blog | 360 Real Estate Tours using iGuide</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (for some UI elements) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF5A5F', // Coral Red
+                        secondary: '#1A1A1A', // Dark Gray
+                        accent: '#FFD166', // Warm Yellow
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'bold': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                        'glow': '0 0 20px rgba(255, 90, 95, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for Specific Design Requirements */
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #FF5A5F, #FFD166);
+        }
+        
+        .btn-gradient {
+            background-image: linear-gradient(to right, #FF5A5F, #FFD166);
+            transition: all 0.3s ease-out;
+        }
+        
+        .btn-gradient:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+            box-shadow: 0 10px 15px -3px rgba(255, 90, 95, 0.3);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="font-sans text-secondary antialiased bg-gray-50">
+
+    <!-- Header Section -->
+    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="https://ihmunro.github.io/360-real-estate-tours-using-iguide-2025-11-27-pwz0p" class="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
+                <div class="bg-primary p-2 rounded-lg group-hover:bg-secondary transition-colors duration-300">
+                    <i data-lucide="box" class="text-white w-6 h-6"></i>
+                </div>
+                <span class="font-bold text-2xl tracking-tight text-secondary group-hover:text-primary transition-colors duration-300">iGuide<span class="text-primary group-hover:text-secondary">360</span></span>
+            </a>
+
+            <!-- Back Link -->
+            <a href="https://ihmunro.github.io/360-real-estate-tours-using-iguide-2025-11-27-pwz0p" class="font-medium text-secondary hover:text-primary transition-colors duration-300 flex items-center gap-2">
+                <span>← Back</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Blog Header / Mini Hero -->
+    <section class="relative pt-32 pb-20 overflow-hidden bg-secondary">
+        <!-- Abstract Background Elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary/10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-accent/10 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-accent font-medium mb-6">
+                <i data-lucide="book-open" class="w-4 h-4"></i>
+                <span>Insights & Resources</span>
+            </div>
+            <h1 class="text-4xl lg:text-6xl font-bold tracking-tight text-white mb-6">
+                Our <span class="gradient-text">Blog</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-0 max-w-2xl mx-auto">
+                Welcome to your source for the latest trends in virtual real estate marketing. Here we share expert tips on maximizing property engagement, technical updates on iGuide Lidar technology, and strategies to close deals faster in a digital-first market.
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Listing Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-secondary border-l-4 border-primary pl-4">Latest Article</h2>
+            </div>
+
+            <!-- Featured Blog Post -->
+            <div class="card-hover bg-white p-8 md:p-10 rounded-xl border border-gray-100 shadow-xl group mb-16 relative overflow-hidden">
+                <!-- Decorative Element -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-bl-full -mr-16 -mt-16 pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    <div class="lg:col-span-12 flex flex-col justify-center relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wide">Featured</span>
+                            <span class="text-gray-400 text-sm font-medium flex items-center gap-1">
+                                <i data-lucide="calendar" class="w-3 h-3"></i> 11/27/2025
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6 group-hover:text-primary transition-colors duration-300 leading-tight">
+                            The Unfair Advantage: How iGuide 360 Tours Are Redefining Real Estate Sales
+                        </h3>
+                        
+                        <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                            iGuide 360 Tours are revolutionizing real estate sales by offering far more than static photography. Utilizing advanced Lidar technology, the system delivers 99.6% measurement accuracy and interactive floor plans that ensure compliance while minimizing liability. Unlike disjointed galleries, iGuide integrates immersive 360-degree views with spatial data, answering critical buyer questions instantly. High-volume agents benefit from rapid scanning and guaranteed 24-hour turnaround times. Furthermore, detailed weekly analytics provide actionable insights into visitor engagement, validating marketing efforts to sellers. In our modern, digital-first economy, iGuide is the strategic tool top producers use to win listings, build trust, and close deals significantly faster.
+                        </p>
+                        
+                        <div>
+                            <a href="https://ihmunro.github.io/360-real-estate-tours-using-iguide-2025-11-27-pwz0p/blog/the-unfair-advantage-how-iguide-360-tours-are-rede.html" class="inline-flex items-center gap-2 btn-gradient text-white px-8 py-3 rounded-lg font-bold shadow-md hover:shadow-lg">
+                                <span>Read More</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-secondary pl-4 border-l-4 border-gray-200">Coming Soon</h2>
+            </div>
+
+            <!-- Future Posts Grid Placeholders -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Placeholder 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 shadow-sm border-dashed border-2 border-gray-200 flex flex-col items-center justify-center text-center h-80 opacity-60">
+                    <div class="bg-gray-200 p-4 rounded-full mb-4">
+                        <i data-lucide="pen-tool" class="w-6 h-6 text-gray-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-400 mb-2">Upcoming Article</h4>
+                    <p class="text-gray-400 text-sm">Top 5 Staging Tips for Virtual Tours</p>
+                </div>
+
+                <!-- Placeholder 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 shadow-sm border-dashed border-2 border-gray-200 flex flex-col items-center justify-center text-center h-80 opacity-60">
+                    <div class="bg-gray-200 p-4 rounded-full mb-4">
+                        <i data-lucide="camera" class="w-6 h-6 text-gray-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-400 mb-2">Upcoming Article</h4>
+                    <p class="text-gray-400 text-sm">Understanding Lidar Technology</p>
+                </div>
+
+                <!-- Placeholder 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 shadow-sm border-dashed border-2 border-gray-200 flex flex-col items-center justify-center text-center h-80 opacity-60">
+                    <div class="bg-gray-200 p-4 rounded-full mb-4">
+                        <i data-lucide="trending-up" class="w-6 h-6 text-gray-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-400 mb-2">Upcoming Article</h4>
+                    <p class="text-gray-400 text-sm">Analyzing Viewer Analytics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Column -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-primary p-1.5 rounded-lg">
+                            <i data-lucide="box" class="text-white w-5 h-5"></i>
+                        </div>
+                        <span class="font-bold text-xl text-white">iGuide<span class="text-primary">360</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        Premium virtual tour solutions for modern real estate professionals. Bringing clarity, accuracy, and engagement to every listing.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Product</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="text-gray-400 hover:text-primary transition-colors text-sm">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-primary transition-colors text-sm">Benefits</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-primary transition-colors text-sm">Reviews</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-primary transition-colors text-sm">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="blog.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Blog</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-400 text-sm">
+                            <i data-lucide="mail" class="w-4 h-4 text-primary"></i>
+                            <a href="mailto:iainhmunro@gmail.com" class="hover:text-white">iainhmunro@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400 text-sm">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primary"></i>
+                            <span>123 Virtual Way, Tech City</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    &copy; 2025 iGuide 360 Tours. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Required JavaScript Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
